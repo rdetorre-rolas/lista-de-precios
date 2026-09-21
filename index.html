@@ -11,98 +11,100 @@
 <style>@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700;800;900&display=swap");</style>
 <style>
   :root {
-    --ice: #e8f2f8;
-    --blue-deep: #0f1e30;
-    --blue-mid: #182c44;
+    --ice: #e8f4fb;
+    --blue-deep: #f0f8ff;
+    --blue-mid: #daeef9;
     --blue-accent: #2d6a9f;
     --blue-light: #3a85c4;
-    --cyan: #4a9fd4;
-    --cyan-glow: #5bb8f0;
+    --cyan: #2d8fc4;
+    --cyan-glow: #1a7ab5;
     --white: #ffffff;
-    --gray-soft: #f0f4f8;
-    --gray-mid: #8fa3b8;
+    --gray-soft: #f5fafd;
+    --gray-mid: #5a7a90;
     --gold: #e8481c;
     --orange: #e8481c;
     --green-wa: #25D366;
+    --text-dark: #1a3a52;
+    --text-mid: #2d5a7a;
   }
   * { margin:0; padding:0; box-sizing:border-box; }
   html { scroll-behavior:smooth; }
-  body { font-family:'Nunito',sans-serif; background:var(--blue-deep); color:var(--white); overflow-x:hidden; }
+  body { font-family:'Nunito',sans-serif; background:#f0f8ff; color:#1a3a52; overflow-x:hidden; }
 
   /* ── HERO ── */
-  .hero { background:linear-gradient(135deg,#081525 0%,#0f1e30 40%,#182c44 70%,#1e3a5f 100%); padding:0; position:relative; overflow:hidden; }
-  .hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 20% 50%,rgba(74,159,212,.12) 0%,transparent 60%),radial-gradient(ellipse at 80% 20%,rgba(232,72,28,.08) 0%,transparent 50%); }
-  .hero-grid { position:absolute; inset:0; background-image:linear-gradient(rgba(74,159,212,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(74,159,212,.04) 1px,transparent 1px); background-size:40px 40px; }
+  .hero { background:linear-gradient(135deg,#e8f4fb 0%,#d0eaf8 40%,#b8dff5 70%,#9fd4f0 100%); padding:0; position:relative; overflow:hidden; }
+  .hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 20% 50%,rgba(255,255,255,.5) 0%,transparent 60%),radial-gradient(ellipse at 80% 20%,rgba(232,72,28,.06) 0%,transparent 50%); }
+  .hero-grid { position:absolute; inset:0; background-image:linear-gradient(rgba(45,111,159,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(45,111,159,.08) 1px,transparent 1px); background-size:40px 40px; }
   .hero-inner { position:relative; z-index:2; max-width:1100px; margin:0 auto; padding:40px 24px 36px; display:flex; align-items:center; gap:32px; flex-wrap:wrap; }
   .logo-block { display:flex; align-items:center; gap:20px; }
   .logo-icon { width:130px; height:102px; background:transparent; border-radius:0; display:flex; align-items:center; justify-content:center; flex-shrink:0; position:relative; padding:0; }
   .logo-icon img { width:130px; height:102px; object-fit:contain; filter:drop-shadow(0 4px 20px rgba(0,0,0,0.55)); }
   .logo-icon::after { display:none; }
   .logo-text h1 { margin:0; padding:0; line-height:1; }
-  .logo-text h1 img { height:clamp(44px,6vw,72px); width:auto; display:block; filter:drop-shadow(0 0 6px rgba(255,255,255,0.9)) drop-shadow(0 0 12px rgba(255,255,255,0.6)) drop-shadow(0 0 2px rgba(255,255,255,1)) brightness(1.05); }
-  .logo-text p { font-size:11px; letter-spacing:3px; text-transform:uppercase; color:#e8481c; font-weight:800; margin-top:6px; }
+  .logo-text h1 img { height:clamp(44px,6vw,72px); width:auto; display:block; filter:drop-shadow(0 1px 4px rgba(45,111,159,.3)) brightness(0.95); }
+  .logo-text p { font-size:11px; letter-spacing:3px; text-transform:uppercase; color:#c43800; font-weight:800; margin-top:6px; }
   .hero-info { margin-left:auto; text-align:right; display:flex; flex-direction:column; gap:8px; }
-  .info-line { font-size:12px; color:rgba(255,255,255,.65); letter-spacing:.5px; }
+  .info-line { font-size:12px; color:rgba(26,58,82,.8); letter-spacing:.5px; }
   .info-line strong { color:var(--cyan); }
-  .info-line a { color:rgba(255,255,255,.65); text-decoration:none; }
-  .date-badge { display:inline-flex; align-items:center; gap:6px; background:rgba(232,72,28,.15); border:1px solid rgba(232,72,28,.4); border-radius:20px; padding:5px 14px; font-size:11px; font-weight:700; letter-spacing:1px; color:#e8481c; text-transform:uppercase; margin-top:4px; align-self:flex-end; }
+  .info-line a { color:rgba(26,58,82,.8); text-decoration:none; }
+  .date-badge { display:inline-flex; align-items:center; gap:6px; background:rgba(232,72,28,.1); border:1px solid rgba(232,72,28,.4); border-radius:20px; padding:5px 14px; font-size:11px; font-weight:700; letter-spacing:1px; color:#c43800; text-transform:uppercase; margin-top:4px; align-self:flex-end; }
 
   /* ── WA STRIP ── */
-  .wa-strip { background:rgba(0,0,0,.3); border-top:1px solid rgba(0,180,216,.15); padding:12px 24px; display:flex; align-items:center; justify-content:center; gap:10px; flex-wrap:wrap; }
-  .wa-label { font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--gray-mid); margin-right:4px; }
+  .wa-strip { background:rgba(255,255,255,.6); border-top:1px solid rgba(45,111,159,.2); padding:12px 24px; display:flex; align-items:center; justify-content:center; gap:10px; flex-wrap:wrap; }
+  .wa-label { font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#2d5a7a; margin-right:4px; }
   .wa-btn { display:inline-flex; align-items:center; gap:7px; background:var(--green-wa); color:white; text-decoration:none; border:none; border-radius:24px; padding:12px 20px; font-size:13px; font-weight:800; transition:all .2s; box-shadow:0 4px 14px rgba(37,211,102,.3); -webkit-tap-highlight-color:rgba(37,211,102,.3); touch-action:manipulation; cursor:pointer; font-family:'Nunito',sans-serif; }
   .wa-btn:hover { transform:translateY(-2px); box-shadow:0 6px 20px rgba(37,211,102,.45); }
   .wa-btn svg { width:16px; height:16px; flex-shrink:0; }
 
   /* ── NAV ── */
-  .nav-bar { background:var(--blue-mid); border-bottom:2px solid rgba(0,180,216,.2); position:sticky; top:0; z-index:100; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none; }
+  .nav-bar { background:#ffffff; border-bottom:2px solid rgba(45,143,196,.25); box-shadow:0 2px 12px rgba(45,111,159,.12); position:sticky; top:0; z-index:100; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none; }
   .nav-bar::-webkit-scrollbar { display:none; }
   .nav-inner { display:flex; max-width:1100px; margin:0 auto; gap:0; padding:0 16px; }
-  .nav-btn { display:flex; align-items:center; gap:6px; padding:14px 18px; background:none; border:none; color:rgba(255,255,255,.5); font-family:'Nunito',sans-serif; font-size:12px; font-weight:700; letter-spacing:1px; text-transform:uppercase; cursor:pointer; border-bottom:3px solid transparent; transition:all .2s; white-space:nowrap; -webkit-tap-highlight-color:rgba(0,180,216,.2); touch-action:manipulation; }
-  .nav-btn:hover { color:var(--white); background:rgba(0,180,216,.06); }
-  .nav-btn.active { color:#5bb8f0; border-bottom-color:#e8481c; background:rgba(74,159,212,.08); }
+  .nav-btn { display:flex; align-items:center; gap:6px; padding:14px 18px; background:none; border:none; color:rgba(26,58,82,.5); font-family:'Nunito',sans-serif; font-size:12px; font-weight:700; letter-spacing:1px; text-transform:uppercase; cursor:pointer; border-bottom:3px solid transparent; transition:all .2s; white-space:nowrap; -webkit-tap-highlight-color:rgba(0,180,216,.2); touch-action:manipulation; }
+  .nav-btn:hover { color:#1a3a52; background:rgba(45,143,196,.08); }
+  .nav-btn.active { color:#2d6a9f; border-bottom-color:#e8481c; background:rgba(45,143,196,.08); }
   .nav-btn .nav-emoji { font-size:14px; }
 
   /* ── CONTENT ── */
-  .content { max-width:1100px; margin:0 auto; padding:32px 20px 60px; }
+  .content { max-width:1100px; margin:0 auto; padding:32px 20px 60px; background:#f0f8ff; }
   .section { display:none; }
   .section.active { display:block; }
   .categories-title { font-family:'Bebas Neue',sans-serif; font-size:13px; letter-spacing:5px; color:#e8481c; text-transform:uppercase; margin-bottom:24px; }
 
   /* ── CATEGORY CARDS ── */
   .cat-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:20px; }
-  .cat-card { background:linear-gradient(135deg,rgba(13,34,71,.9),rgba(10,22,40,.95)); border:1px solid rgba(0,180,216,.15); border-radius:16px; overflow:hidden; cursor:pointer; transition:all .3s; position:relative; -webkit-tap-highlight-color:rgba(0,180,216,.2); touch-action:manipulation; user-select:none; -webkit-user-select:none; }
-  .cat-card:hover { transform:translateY(-5px); border-color:rgba(0,180,216,.5); box-shadow:0 16px 40px rgba(0,0,0,.5),0 0 20px rgba(0,180,216,.15); }
+  .cat-card { background:linear-gradient(135deg,#ffffff,#f0f8ff); border:1px solid rgba(45,143,196,.2); border-radius:16px; overflow:hidden; cursor:pointer; transition:all .3s; position:relative; -webkit-tap-highlight-color:rgba(45,143,196,.2); touch-action:manipulation; user-select:none; -webkit-user-select:none; box-shadow:0 2px 12px rgba(45,111,159,.08); }
+  .cat-card:hover { transform:translateY(-5px); border-color:rgba(45,143,196,.5); box-shadow:0 16px 40px rgba(45,111,159,.18),0 0 20px rgba(45,143,196,.12); }
   .cat-card-img-wrap { overflow:hidden; position:relative; height:160px; }
   .cat-card-img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .4s; }
   .cat-card:hover .cat-card-img { transform:scale(1.05); }
   .cat-card-img-wrap::after { content:''; position:absolute; bottom:0; left:0; right:0; height:60px; background:linear-gradient(transparent,rgba(10,22,40,.95)); }
   .cat-card-body { padding:14px 18px 16px; }
-  .cat-card-name { font-family:'Bebas Neue',sans-serif; font-size:22px; letter-spacing:2px; color:var(--white); margin-bottom:4px; }
-  .cat-card-count { font-size:11px; color:#4a9fd4; font-weight:700; letter-spacing:1px; text-transform:uppercase; }
-  .cat-card-arrow { position:absolute; top:14px; right:14px; background:rgba(0,180,216,.2); border:1px solid rgba(0,180,216,.4); border-radius:50%; width:30px; height:30px; display:flex; align-items:center; justify-content:center; color:var(--cyan); font-size:14px; transition:all .2s; }
-  .cat-card:hover .cat-card-arrow { background:var(--cyan); color:var(--blue-deep); }
+  .cat-card-name { font-family:'Bebas Neue',sans-serif; font-size:22px; letter-spacing:2px; color:#1a3a52; margin-bottom:4px; }
+  .cat-card-count { font-size:11px; color:#2d8fc4; font-weight:700; letter-spacing:1px; text-transform:uppercase; }
+  .cat-card-arrow { position:absolute; top:14px; right:14px; background:rgba(45,143,196,.12); border:1px solid rgba(45,143,196,.3); border-radius:50%; width:30px; height:30px; display:flex; align-items:center; justify-content:center; color:#2d8fc4; font-size:14px; transition:all .2s; }
+  .cat-card:hover .cat-card-arrow { background:#2d8fc4; color:#ffffff; }
 
   /* ── PRODUCT SECTION HEADER ── */
   .cat-header { display:flex; align-items:center; gap:16px; margin-bottom:28px; }
-  .back-btn { display:flex; align-items:center; gap:6px; background:rgba(74,159,212,.1); border:1px solid rgba(74,159,212,.3); border-radius:10px; padding:8px 14px; color:#4a9fd4; font-size:12px; font-weight:700; letter-spacing:1px; text-transform:uppercase; cursor:pointer; transition:all .2s; font-family:'Nunito',sans-serif; -webkit-tap-highlight-color:rgba(74,159,212,.2); touch-action:manipulation; }
-  .back-btn:hover { background:rgba(74,159,212,.2); transform:translateX(-3px); }
-  .cat-header h2 { font-family:'Bebas Neue',sans-serif; font-size:36px; letter-spacing:3px; background:linear-gradient(90deg,var(--white),#4a9fd4); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+  .back-btn { display:flex; align-items:center; gap:6px; background:rgba(45,143,196,.1); border:1px solid rgba(45,143,196,.3); border-radius:10px; padding:8px 14px; color:#2d6a9f; font-size:12px; font-weight:700; letter-spacing:1px; text-transform:uppercase; cursor:pointer; transition:all .2s; font-family:'Nunito',sans-serif; -webkit-tap-highlight-color:rgba(74,159,212,.2); touch-action:manipulation; }
+  .back-btn:hover { background:rgba(45,143,196,.18); transform:translateX(-3px); }
+  .cat-header h2 { font-family:'Bebas Neue',sans-serif; font-size:36px; letter-spacing:3px; background:linear-gradient(90deg,#1a3a52,#2d8fc4); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
 
   /* ── PRODUCT GRID ── */
   .products-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:16px; }
-  .prod-card { background:linear-gradient(135deg,rgba(13,34,71,.8),rgba(10,22,40,.9)); border:1px solid rgba(0,180,216,.1); border-radius:14px; overflow:hidden; transition:all .25s; animation:fadeUp .4s ease both; position:relative; }
-  .prod-card:hover { border-color:rgba(0,180,216,.35); transform:translateY(-3px); box-shadow:0 10px 30px rgba(0,0,0,.4); }
+  .prod-card { background:linear-gradient(135deg,#ffffff,#f5fafd); border:1px solid rgba(45,143,196,.15); border-radius:14px; overflow:hidden; transition:all .25s; animation:fadeUp .4s ease both; position:relative; box-shadow:0 2px 8px rgba(45,111,159,.07); }
+  .prod-card:hover { border-color:rgba(45,143,196,.4); transform:translateY(-3px); box-shadow:0 10px 30px rgba(45,111,159,.15); }
   @keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
   .prod-card-img-wrap { position:relative; overflow:hidden; height:150px; }
   .prod-card-img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .4s; }
   .prod-card:hover .prod-card-img { transform:scale(1.06); }
   .prod-card-img-wrap::after { content:''; position:absolute; bottom:0; left:0; right:0; height:50px; background:linear-gradient(transparent,rgba(10,22,40,.9)); }
-  .prod-code { position:absolute; top:10px; left:10px; background:rgba(0,0,0,.65); border:1px solid rgba(74,159,212,.35); border-radius:6px; padding:3px 8px; font-size:10px; font-weight:800; letter-spacing:1px; color:#5bb8f0; text-transform:uppercase; z-index:1; }
+  .prod-code { position:absolute; top:10px; left:10px; background:rgba(45,111,159,.75); border:1px solid rgba(255,255,255,.3); border-radius:6px; padding:3px 8px; font-size:10px; font-weight:800; letter-spacing:1px; color:#ffffff; text-transform:uppercase; z-index:1; }
   .prod-body { padding:14px 16px 16px; }
-  .prod-name { font-size:13px; font-weight:800; line-height:1.35; color:var(--white); margin-bottom:8px; min-height:36px; }
+  .prod-name { font-size:13px; font-weight:800; line-height:1.35; color:#1a3a52; margin-bottom:8px; min-height:36px; }
   .prod-meta { display:flex; align-items:center; justify-content:space-between; margin-top:10px; }
-  .prod-weight { font-size:11px; color:var(--gray-mid); font-weight:600; background:rgba(255,255,255,.05); border-radius:6px; padding:3px 8px; }
+  .prod-weight { font-size:11px; color:#5a7a90; font-weight:600; background:rgba(45,143,196,.08); border-radius:6px; padding:3px 8px; }
   .prod-price { font-family:'Bebas Neue',sans-serif; font-size:24px; letter-spacing:1px; color:#e8891c; text-shadow:0 0 12px rgba(232,72,28,.25); }
   .prod-price span { font-size:12px; font-family:'Nunito',sans-serif; font-weight:700; color:rgba(232,137,28,.7); }
 
@@ -114,37 +116,37 @@
   /* ── IMAGE EDITOR MODAL ── */
   .modal-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,.8); z-index:500; align-items:center; justify-content:center; backdrop-filter:blur(4px); }
   .modal-overlay.open { display:flex; }
-  .modal-box { background:linear-gradient(135deg,#0d2247,#0a1628); border:1px solid rgba(0,180,216,.3); border-radius:20px; padding:28px; width:90%; max-width:480px; box-shadow:0 24px 60px rgba(0,0,0,.6); }
-  .modal-title { font-family:'Bebas Neue',sans-serif; font-size:22px; letter-spacing:2px; color:#4a9fd4; margin-bottom:6px; }
-  .modal-prod-name { font-size:13px; color:rgba(255,255,255,.6); margin-bottom:20px; font-weight:600; }
+  .modal-box { background:linear-gradient(135deg,#ffffff,#f0f8ff); border:1px solid rgba(0,180,216,.3); border-radius:20px; padding:28px; width:90%; max-width:480px; box-shadow:0 24px 60px rgba(0,0,0,.6); }
+  .modal-title { font-family:'Bebas Neue',sans-serif; font-size:22px; letter-spacing:2px; color:#2d6a9f; margin-bottom:6px; }
+  .modal-prod-name { font-size:13px; color:#5a7a90; margin-bottom:20px; font-weight:600; }
   .modal-preview { width:100%; height:160px; border-radius:12px; object-fit:cover; border:2px solid rgba(0,180,216,.2); margin-bottom:16px; background:#0a1628; }
-  .modal-label { font-size:11px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; color:var(--gray-mid); margin-bottom:6px; }
-  .modal-input { width:100%; background:rgba(255,255,255,.06); border:1px solid rgba(0,180,216,.25); border-radius:10px; padding:10px 14px; font-size:13px; color:var(--white); font-family:'Nunito',sans-serif; outline:none; transition:border .2s; }
-  .modal-input:focus { border-color:#4a9fd4; }
-  .modal-hint { font-size:11px; color:var(--gray-mid); margin-top:6px; margin-bottom:18px; }
-  .modal-hint a { color:#4a9fd4; text-decoration:none; }
+  .modal-label { font-size:11px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; color:#5a7a90; margin-bottom:6px; }
+  .modal-input { width:100%; background:#ffffff; border:1px solid rgba(45,143,196,.3); border-radius:10px; padding:10px 14px; font-size:13px; color:#1a3a52; font-family:'Nunito',sans-serif; outline:none; transition:border .2s; }
+  .modal-input:focus { border-color:#2d8fc4; }
+  .modal-hint { font-size:11px; color:#5a7a90; margin-top:6px; margin-bottom:18px; }
+  .modal-hint a { color:#2d6a9f; text-decoration:none; }
   .modal-actions { display:flex; gap:10px; }
   .modal-save { flex:1; background:#2d6a9f; color:#ffffff; border:none; border-radius:10px; padding:11px; font-size:13px; font-weight:900; cursor:pointer; font-family:'Nunito',sans-serif; transition:all .2s; }
   .modal-save:hover { background:#3a85c4; transform:translateY(-1px); }
-  .modal-cancel { background:rgba(255,255,255,.07); color:rgba(255,255,255,.6); border:1px solid rgba(255,255,255,.1); border-radius:10px; padding:11px 18px; font-size:13px; font-weight:700; cursor:pointer; font-family:'Nunito',sans-serif; transition:all .2s; }
-  .modal-cancel:hover { background:rgba(255,255,255,.12); }
+  .modal-cancel { background:rgba(45,143,196,.08); color:#5a7a90; border:1px solid rgba(45,143,196,.2); border-radius:10px; padding:11px 18px; font-size:13px; font-weight:700; cursor:pointer; font-family:'Nunito',sans-serif; transition:all .2s; }
+  .modal-cancel:hover { background:rgba(45,143,196,.15); }
   .modal-reset { background:rgba(255,80,80,.1); color:#ff6b6b; border:1px solid rgba(255,80,80,.2); border-radius:10px; padding:11px 14px; font-size:12px; font-weight:700; cursor:pointer; font-family:'Nunito',sans-serif; transition:all .2s; }
   .modal-reset:hover { background:rgba(255,80,80,.2); }
 
   /* ── EDIT MODE TOGGLE ── */
-  .edit-toggle { position:fixed; bottom:80px; right:24px; background:var(--blue-mid); border:1px solid rgba(74,159,212,.3); border-radius:24px; padding:8px 16px; font-size:11px; font-weight:800; color:#4a9fd4; cursor:pointer; letter-spacing:1px; text-transform:uppercase; font-family:'Nunito',sans-serif; transition:all .2s; z-index:200; box-shadow:0 4px 16px rgba(0,0,0,.4); }
-  .edit-toggle.on { background:rgba(74,159,212,.2); border-color:#4a9fd4; }
+  .edit-toggle { position:fixed; bottom:80px; right:24px; background:#ffffff; border:1px solid rgba(45,143,196,.3); border-radius:24px; padding:8px 16px; font-size:11px; font-weight:800; color:#2d6a9f; box-shadow:0 2px 12px rgba(45,111,159,.15); cursor:pointer; letter-spacing:1px; text-transform:uppercase; font-family:'Nunito',sans-serif; transition:all .2s; z-index:200; box-shadow:0 4px 16px rgba(0,0,0,.4); }
+  .edit-toggle.on { background:rgba(45,143,196,.15); border-color:#2d8fc4; }
   .edit-toggle:hover { transform:scale(1.05); }
-  .edit-badge { display:none; position:fixed; top:0; left:0; right:0; z-index:150; background:rgba(232,72,28,.15); border-bottom:2px solid #e8481c; padding:6px; text-align:center; font-size:11px; font-weight:800; letter-spacing:2px; color:#e8481c; text-transform:uppercase; font-family:'Nunito',sans-serif; }
+  .edit-badge { display:none; position:fixed; top:0; left:0; right:0; z-index:150; background:rgba(45,143,196,.15); border-bottom:2px solid #2d8fc4; padding:6px; text-align:center; font-size:11px; font-weight:800; letter-spacing:2px; color:#2d6a9f; text-transform:uppercase; font-family:'Nunito',sans-serif; }
   body.edit-mode .edit-badge { display:block; }
   body.edit-mode .edit-img-btn { opacity:1; pointer-events:all; }
 
   /* ── FOOTER ── */
-  .footer { background:rgba(0,0,0,.4); border-top:1px solid rgba(0,180,216,.1); padding:24px; text-align:center; font-size:11px; color:var(--gray-mid); letter-spacing:1px; }
-  .footer strong { color:#4a9fd4; }
+  .footer { background:#daeef9; border-top:1px solid rgba(45,143,196,.2); padding:24px; text-align:center; font-size:11px; color:#4a6a80; letter-spacing:1px; }
+  .footer strong { color:#1e5f8a; }
 
   /* ── SCROLL TOP ── */
-  .scroll-top { position:fixed; bottom:24px; right:24px; background:#e8481c; color:#ffffff; border:none; border-radius:50%; width:44px; height:44px; font-size:18px; cursor:pointer; box-shadow:0 4px 20px rgba(232,72,28,.4); transition:all .2s; display:none; align-items:center; justify-content:center; z-index:200; }
+  .scroll-top { position:fixed; bottom:24px; right:24px; background:#2d8fc4; color:#ffffff; border:none; border-radius:50%; width:44px; height:44px; font-size:18px; cursor:pointer; box-shadow:0 4px 20px rgba(45,143,196,.35); transition:all .2s; display:none; align-items:center; justify-content:center; z-index:200; }
   .scroll-top.visible { display:flex; }
   .scroll-top:hover { transform:scale(1.1); }
 
@@ -200,7 +202,7 @@
   "alternateName": "Mi Conge",
   "description": "Distribuidora de alimentos congelados en Monterrey, Nuevo León. Especialistas en pechugas, alitas, papas, quesos, salsas y carnes para el sector HORECA.",
   "url": "https://rdetorre-rolas.github.io/lista-de-precios/",
-  "telephone": "+528116650742",
+  "telephone": "+528148381855",
   "email": "micongemx@gmail.com",
   "address": {
     "@type": "PostalAddress",
@@ -302,7 +304,7 @@
     <div class="hero-info">
       <div class="info-line">📍 Francisco Bruno Barrera #222, Col. Burócratas del Estado</div>
       <div class="info-line">CP 64380 · Monterrey, Nuevo León</div>
-      <div class="info-line">📞 <strong>8116650742</strong> (Línea fija)</div>
+      <div class="info-line">📞 <strong>8148381855</strong> (Línea fija)</div>
       <div class="info-line">✉️ <a href="mailto:micongemx@gmail.com">micongemx@gmail.com</a></div>
       <div class="info-line">RFC: <strong>CON200511524</strong></div>
       <div class="date-badge">❄ Lista vigente · 21 septiembre 2026 · Precios / KG</div>
